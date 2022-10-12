@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TableList from './Components/Table/TableList';
 
 function App() {
+  const [data,setData]=useState([
+    {id: 1,name:"Suhrobbek", last: "Xayrullayev", password: "123456789"},
+    {id: 2,name:"Muhammadsiddiq  ", last: "blalslsa", password: "123456789"}, 
+    {id: 3,name:"Olimjon", last: "Olimjonov" , password: "123456789"},
+    {id: 4,name:"shaxzodbek", last: "Xasanov", password: "123456789"},
+    {id: 5,name:"Abduvali", last: "Xusanov", password: "123456789"}
+  ])``
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn 
-        </a>
-      </header>
+<TableList data={data}/>
     </div>
   );
 }
